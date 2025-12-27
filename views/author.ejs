@@ -1,1 +1,333 @@
-<div>Hello world, you are in authors</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="main_frame">
+
+
+            <div class="left_frame">
+                <div class="left_1">
+                    <div class="left_1-1">
+                        <img
+                         src="images/profile.jpg"
+                         width="156px"
+                         height="142px"
+                         alt="">
+                    </div>
+                    <div class="left_1-2"><%=user.name%></div>
+                    <div class="left_1-3"><%=user.profession%></div>
+                    <div class="left-icons">
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/facebook.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/instagram.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/kakaotalk.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/telegram.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/x.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/youtube.svg" class="icon-1">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+
+
+                <div class="left_2">
+                    <div class="info">
+                        <span class="label">Age:</span>  
+                        <span class="value"><%=user.age%></span>                      
+                    </div>
+                    <div class="info">
+                        <span class="label">Residence:</span>
+                        <span class="value"><%=user.residence%></span>
+                    </div>
+                    <div class="info">
+                        <span class="label">Freelance:</span>
+                        <span class="value"><%=user.freelance%></span>
+                    </div>
+                    <div class="info">
+                        <span class="label">Address:</span>
+                        <span class="value"><%=user.address%></span>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+
+                
+                <div class="left_3">
+                    <div class="title">Languages</div>
+
+                    <div class="lang-item">
+                        <div class="lang-top">
+                            <span class="lang-name"><%=user.languages[0]%></span>
+                            <span class="lang-percent">100%</span>
+                        </div>
+                        <div class="lang-bar">
+                            <div class="lang-fill" style="width: 100%"></div>
+                        </div>
+                    </div>
+
+                    <div class="lang-item">
+                        <div class="lang-top">
+                            <span class="lang-name"><%=user.languages[1]%></span>
+                            <span class="lang-percent">80%</span>
+                        </div>
+                        <div class="lang-bar">
+                            <div class="lang-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="lang-item">
+                        <div class="lang-top">
+                            <span class="lang-name"><%=user.languages[2]%></span>
+                            <span class="lang-percent">60%</span>
+                        </div>
+                        <div class="lang-bar">
+                            <div class="lang-fill" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+
+
+                <div class="left_4">
+                    <div class="title">Skills</div>
+
+                    <div class="skill-item">
+                        <div class="skill-top">
+                            <span class="skill-name"><%=user.skills[0]%></span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-top">
+                            <span class="skill-name"><%=user.skills[1]%></span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-top">
+                            <span class="skill-name"><%=user.skills[2]%></span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-top">
+                            <span class="skill-name"><%=user.skills[3]%></span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-top">
+                            <span class="skill-name"><%=user.skills[4]%></span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+
+
+                <div class="left_5">
+                    <div class="title">Extra Skills</div>
+
+                    <div class="extra-list">
+                        <div class="extra-item">
+                            <span class="extra-icon"><img src="icon/skill_icon.svg" class="skill_icon"></span>
+                            <span class="extra-text"><%=user.extra_skills[0]%></span>
+                        </div>
+
+                        <div class="extra-item">
+                            <span class="extra-icon"><img src="icon/skill_icon.svg" class="skill_icon"></span>
+                            <span class="extra-text"><%=user.extra_skills[1]%></span>
+                        </div>
+
+                        <div class="extra-item">
+                            <span class="extra-icon"><img src="icon/skill_icon.svg" class="skill_icon"></span>
+                            <span class="extra-text"><%=user.extra_skills[2]%></span>
+                        </div>
+
+                        <div class="extra-item">
+                            <span class="extra-icon"><img src="icon/skill_icon.svg" class="skill_icon"></span>
+                            <span class="extra-text"><%=user.extra_skills[3]%></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+            </div>
+
+            <div class="mid_frame">
+                <section class="hero">
+                    <div class="hero-left">
+                        <h1 class="hero-title">Doctor neurologists <br> is OHSU Hosipital</h1>
+
+                        <p class="hero-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore itaque ipsum sint fuga molestias sit aut, asperiores dolorem quibusdam eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, architecto.</p>
+
+                        <a href="#" class="hero-btn">HIRE ME</a>
+                    </div>
+
+                    <div class="hero-right">
+                        <img src="images/hero.png" class="hero-img">
+                    </div>
+                </section>
+
+                <section class="services">
+                    <div class="service-text">
+                        <h2 class="service-title">My Services</h2>
+                        <p class="service-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas amet alias, corporis unde commodi itaque labore modi. Suscipit, qui soluta?</p>
+                    </div>
+                    
+                    <div class="service-cards">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="icon/web-programming.png" class="service-icon-img">
+                            </div>
+                            <div class="service-title">Web Development</div>
+                            <div class="service-desc">Lorem ipsum dolor sit amet.</div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="icon/ux-design.png" class="service-icon-img">
+                            </div>
+                            <div class="service-title">UI/UX Design</div>
+                            <div class="service-desc">Lorem ipsum dolor sit amet.</div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="icon/microphone.png" class="service-icon-img">
+                            </div>
+                            <div class="service-title">Sound Design</div>
+                            <div class="service-desc">Lorem ipsum dolor sit amet.</div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="icon/game-development.png" class="service-icon-img">
+                            </div>
+                            <div class="service-title">Game Design</div>
+                            <div class="service-desc">Lorem ipsum dolor sit amet.</div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <img src="icon/photographer.png" class="service-icon-img">
+                            </div>
+                            <div class="service-title">Photo</div>
+                            <div class="service-desc">Lorem ipsum dolor sit amet.</div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-title">Advertising</div>
+                            <div class="service-desc">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                            <div class="card-btn">
+                                <a href="#" class="card-btn">CREATE NOW ></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div> 
+
+            <div class="right_frame">
+                <section class="mode-section">
+                    <div class="mode">
+                        <a href="http://localhost:3000/author/">
+                            <div class="mode-icon">
+                                <img src="btn_icon/mode.png" class="mood-icon-img">
+                            </div>
+                            <span class="tooltip">Mode</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="nav-list">
+                    <a href="http://localhost:3000/author/" class="nav-item nav-item active">
+                        <div class="nav-icon">
+                            <img src="btn_icon/home.png" class="nav-icon-img">
+                        </div>
+                        <span class="tooltip">Home</span>
+                    </a>
+
+                    <a href="http://localhost:3000/author/" class="nav-item">
+                        <div class="nav-icon">
+                            <img src="btn_icon/language.png" class="nav-icon-img">
+                        </div>
+                        <span class="tooltip">Languages</span>
+                    </a>
+
+                    <a href="http://localhost:3000/author/" class="nav-item">
+                        <div class="nav-icon">
+                            <img src="btn_icon/study.png" class="nav-icon-img">
+                        </div>
+                        <span class="tooltip">Study</span>
+                    </a>
+
+                    <a href="http://localhost:3000/author/" class="nav-item">
+                        <div class="nav-icon">
+                            <img src="btn_icon/work.png" class="nav-icon-img">
+                        </div>
+                        <span class="tooltip">Work</span>
+                    </a>
+
+                    <a href="http://localhost:3000/author/" class="nav-item">
+                        <div class="nav-icon">
+                            <img src="btn_icon/note.png" class="nav-icon-img">
+                        </div>
+                        <span class="tooltip">Notes</span>
+                    </a>
+                </section>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>
