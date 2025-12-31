@@ -1,20 +1,33 @@
-//MIT Task <-A-------------------------------------------------------
+//MIT Task <-B--A----------------------------------------------------
+// Task-B
+// Write a function that takes a string as input and returns the number of digits in the string.
 
-function countLetter(letter, word) {
+function countDigits(str) {
   let count = 0;
-
-  for (let i = 0; i < word.length; i++) {
-    if (word[i] === letter) {
+  for (let i = 0; i < str.length; i++) {
+    if (!isNaN(str[i]) && str[i] !== ' ') {
       count++;
     }
   }
-
   return count;
 }
+console.log(countDigits("ad2a54y79we3t0sfgb9"));
 
 
-console.log(countLetter('e', 'engineer'));
-console.log(countLetter('n', 'banana'));
+// Task-A
+// Write a function that takes a letter and a word as input and returns the number of times the letter appears in the word.
+
+// function countLetter(letter, word) {
+//   let count = 0;
+//   for (let i = 0; i < word.length; i++) {
+//     if (word[i] === letter) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// console.log(countLetter('e', 'engineer'));
+// console.log(countLetter('n', 'banana'));
 
 
 
