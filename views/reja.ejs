@@ -12,11 +12,11 @@
         <h1 class="display-4 text-center py-1">Reja va Mashqlar</h1>
 
         <div class="jumbotron p-3 shadow-sm">
-            <form id="create-from" action="/create-item" method="POST">
+            <form id="create-form" action="/create-item" method="POST">
                 <div class="d-flex align-items-center">
                     <input 
                         type="text"
-                        name="reja"
+                        na  me="reja"
                         id="create-field"
                         autofocus
                         autocomplete="off"
@@ -47,9 +47,12 @@
             <% }) %>    
         </ul>
 
-        <button class="btn btn-primary" style="border-radius: 10px;">
+        <button id="clear-all" class="btn btn-primary" style="border-radius: 10px;">
             Ochirish
         </button>
     </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/browser.js"></script>
 </body>
 </html>

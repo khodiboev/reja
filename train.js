@@ -1,4 +1,69 @@
-//MIT Task <-B--A----------------------------------------------------
+//MIT Task <-C--B--A----------------------------------------------------
+// Task-C
+// Write a Shop class that manages the inventory of products.
+
+class Shop {
+  // Do‘kon ochilganda boshlang‘ich mahsulotlar
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+
+  // Hozirgi vaqtni olish
+  getTime() {
+    const now = new Date();
+    return now.getHours() + ":" + now.getMinutes();
+  }
+
+  // Qoldiqni ko‘rsatish
+  qoldiq() {
+    console.log(
+      "Hozir " + this.getTime() + "da " +
+      this.non + "ta non, " +
+      this.lagmon + "ta lagmon va " +
+      this.cola + "ta cola mavjud!"
+    );
+  }
+
+  // Mahsulot sotish
+  sotish(mahsulot, son) {
+    if (mahsulot === "non") {
+      this.non = this.non - son;
+    }
+    if (mahsulot === "lagmon") {
+      this.lagmon = this.lagmon - son;
+    }
+    if (mahsulot === "cola") {
+      this.cola = this.cola - son;
+    }
+    console.log(this.getTime() + "da " + son + "ta " + mahsulot + " sotildi");
+  }
+
+  // Mahsulot qabul qilish
+  qabul(mahsulot, son) {
+    if (mahsulot === "non") {
+      this.non = this.non + son;
+    }
+    if (mahsulot === "lagmon") {
+      this.lagmon = this.lagmon + son;
+    }
+    if (mahsulot === "cola") {
+      this.cola = this.cola + son;
+    }
+    console.log(this.getTime() + "da " + son + "ta " + mahsulot + " qabul qilindi");
+  }
+}
+
+const shop = new Shop(4, 5, 2);
+
+shop.qoldiq();          // Hozirgi qoldiq
+shop.sotish("non", 3);  // 3 ta non sotildi
+shop.qabul("cola", 4);  // 4 ta cola qabul qilindi
+shop.qoldiq();          // Yangi qoldiq
+
+
+
 // Task-B
 // Write a function that takes a string as input and returns the number of digits in the string.
 
