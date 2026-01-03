@@ -1,6 +1,6 @@
-//MIT Task <-C--B--A----------------------------------------------------
+//MIT Tasks <-C--B--A----------------------------------------------------
 // Task-C
-// Write a Shop class that manages the inventory of products.
+//Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin. MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 
 class Shop {
   // Do‘kon ochilganda boshlang‘ich mahsulotlar
@@ -65,23 +65,23 @@ shop.qoldiq();          // Yangi qoldiq
 
 
 // Task-B
-// Write a function that takes a string as input and returns the number of digits in the string.
+///Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin. MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 
-function countDigits(str) {
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (!isNaN(str[i]) && str[i] !== ' ') {
-      count++;
-    }
-  }
-  return count;
-}
-console.log(countDigits("ad2a54y79we3t0sfgb9"));
+// function countDigits(str) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (!isNaN(str[i]) && str[i] !== ' ') {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// console.log(countDigits("ad2a54y79we3t0sfgb9"));
+
 
 
 // Task-A
-// Write a function that takes a letter and a word as input and returns the number of times the letter appears in the word.
-
+//Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni ikkinchi parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.MASALAN countLetter("e", "engineer") 3ni return qiladi.
 // function countLetter(letter, word) {
 //   let count = 0;
 //   for (let i = 0; i < word.length; i++) {
