@@ -1,66 +1,90 @@
-//MIT Tasks <-C--B--A----------------------------------------------------
-// Task-C
-//Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin. MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+//MIT Tasks <-D--C--B--A----------------------------------------------------
+// TASK-D
+// Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin. MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
-class Shop {
-  // Do‘kon ochilganda boshlang‘ich mahsulotlar
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
-  }
+function checkContent(str1, str2) {
+    // Uzunlikni tekshiramiz
+    if (str1.length !== str2.length) {
+        return false;
+    }
 
-  // Hozirgi vaqtni olish
-  getTime() {
-    const now = new Date();
-    return now.getHours() + ":" + now.getMinutes();
-  }
+    // Harflarni tartiblash
+    let sorted1 = str1.split('').sort().join('');
+    let sorted2 = str2.split('').sort().join('');
 
-  // Qoldiqni ko‘rsatish
-  qoldiq() {
-    console.log(
-      "Hozir " + this.getTime() + "da " +
-      this.non + "ta non, " +
-      this.lagmon + "ta lagmon va " +
-      this.cola + "ta cola mavjud!"
-    );
-  }
-
-  // Mahsulot sotish
-  sotish(mahsulot, son) {
-    if (mahsulot === "non") {
-      this.non = this.non - son;
-    }
-    if (mahsulot === "lagmon") {
-      this.lagmon = this.lagmon - son;
-    }
-    if (mahsulot === "cola") {
-      this.cola = this.cola - son;
-    }
-    console.log(this.getTime() + "da " + son + "ta " + mahsulot + " sotildi");
-  }
-
-  // Mahsulot qabul qilish
-  qabul(mahsulot, son) {
-    if (mahsulot === "non") {
-      this.non = this.non + son;
-    }
-    if (mahsulot === "lagmon") {
-      this.lagmon = this.lagmon + son;
-    }
-    if (mahsulot === "cola") {
-      this.cola = this.cola + son;
-    }
-    console.log(this.getTime() + "da " + son + "ta " + mahsulot + " qabul qilindi");
-  }
+    // Taqqoslash
+    return sorted1 === sorted2;
 }
 
-const shop = new Shop(4, 5, 2);
+console.log(checkContent("mitgroup", "gmtiprou"));
+console.log(checkContent("hello", "ollhe"));      
+console.log(checkContent("hello", "helloo"));     
+console.log(checkContent("abc", "abd"));       
 
-shop.qoldiq();          // Hozirgi qoldiq
-shop.sotish("non", 3);  // 3 ta non sotildi
-shop.qabul("cola", 4);  // 4 ta cola qabul qilindi
-shop.qoldiq();          // Yangi qoldiq
+
+
+// // Task-C
+// //Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin. MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+
+// class Shop {
+//   // Do‘kon ochilganda boshlang‘ich mahsulotlar
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//   }
+
+//   // Hozirgi vaqtni olish
+//   getTime() {
+//     const now = new Date();
+//     return now.getHours() + ":" + now.getMinutes();
+//   }
+
+//   // Qoldiqni ko‘rsatish
+//   qoldiq() {
+//     console.log(
+//       "Hozir " + this.getTime() + "da " +
+//       this.non + "ta non, " +
+//       this.lagmon + "ta lagmon va " +
+//       this.cola + "ta cola mavjud!"
+//     );
+//   }
+
+//   // Mahsulot sotish
+//   sotish(mahsulot, son) {
+//     if (mahsulot === "non") {
+//       this.non = this.non - son;
+//     }
+//     if (mahsulot === "lagmon") {
+//       this.lagmon = this.lagmon - son;
+//     }
+//     if (mahsulot === "cola") {
+//       this.cola = this.cola - son;
+//     }
+//     console.log(this.getTime() + "da " + son + "ta " + mahsulot + " sotildi");
+//   }
+
+//   // Mahsulot qabul qilish
+//   qabul(mahsulot, son) {
+//     if (mahsulot === "non") {
+//       this.non = this.non + son;
+//     }
+//     if (mahsulot === "lagmon") {
+//       this.lagmon = this.lagmon + son;
+//     }
+//     if (mahsulot === "cola") {
+//       this.cola = this.cola + son;
+//     }
+//     console.log(this.getTime() + "da " + son + "ta " + mahsulot + " qabul qilindi");
+//   }
+// }
+
+// const shop = new Shop(4, 5, 2);
+
+// shop.qoldiq();          // Hozirgi qoldiq
+// shop.sotish("non", 3);  // 3 ta non sotildi
+// shop.qabul("cola", 4);  // 4 ta cola qabul qilindi
+// shop.qoldiq();          // Yangi qoldiq
 
 
 
