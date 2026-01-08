@@ -1,25 +1,33 @@
-//MIT Tasks <-D--C--B--A----------------------------------------------------
+//MIT Tasks <-E--D--C--B--A----------------------------------------------------
+// TASK E:
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+function getReverse(str) {
+    return str.split("").reverse().join("");
+}
+console.log(getReverse("play"));
+console.log(getReverse("maker"));
+
+
 // TASK-D
 // Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin. MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
-function checkContent(str1, str2) {
-    // Uzunlikni tekshiramiz
-    if (str1.length !== str2.length) {
-        return false;
-    }
-
-    // Harflarni tartiblash
-    let sorted1 = str1.split('').sort().join('');
-    let sorted2 = str2.split('').sort().join('');
-
-    // Taqqoslash
-    return sorted1 === sorted2;
-}
-
-console.log(checkContent("mitgroup", "gmtiprou"));
-console.log(checkContent("hello", "ollhe"));      
-console.log(checkContent("hello", "helloo"));     
-console.log(checkContent("abc", "abd"));       
+// function checkContent(str1, str2) {
+//     // Uzunlikni tekshiramiz
+//     if (str1.length !== str2.length) {
+//         return false;
+//     }
+//     // Harflarni tartiblash
+//     let sorted1 = str1.split('').sort().join('');
+//     let sorted2 = str2.split('').sort().join('');
+//     // Taqqoslash
+//     return sorted1 === sorted2;
+// }
+// console.log(checkContent("mitgroup", "gmtiprou"));
+// console.log(checkContent("hello", "ollhe"));      
+// console.log(checkContent("hello", "helloo"));     
+// console.log(checkContent("abc", "abd"));       
 
 
 
@@ -33,13 +41,11 @@ console.log(checkContent("abc", "abd"));
 //     this.lagmon = lagmon;
 //     this.cola = cola;
 //   }
-
 //   // Hozirgi vaqtni olish
 //   getTime() {
 //     const now = new Date();
 //     return now.getHours() + ":" + now.getMinutes();
 //   }
-
 //   // Qoldiqni ko‘rsatish
 //   qoldiq() {
 //     console.log(
@@ -49,7 +55,6 @@ console.log(checkContent("abc", "abd"));
 //       this.cola + "ta cola mavjud!"
 //     );
 //   }
-
 //   // Mahsulot sotish
 //   sotish(mahsulot, son) {
 //     if (mahsulot === "non") {
@@ -63,7 +68,6 @@ console.log(checkContent("abc", "abd"));
 //     }
 //     console.log(this.getTime() + "da " + son + "ta " + mahsulot + " sotildi");
 //   }
-
 //   // Mahsulot qabul qilish
 //   qabul(mahsulot, son) {
 //     if (mahsulot === "non") {
