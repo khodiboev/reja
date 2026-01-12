@@ -1,23 +1,49 @@
 //MIT Tasks <-E--D--C--B--A----------------------------------------------------
+// TASK G:
+// Yagona parametrga ega function tuzing.
+// Va bu function parametr orqalik integer ma'lumot turlariga ega bo'lgan bir arrayni qabul qilsin.
+// Ushbu function bizga arrayning tarkibidagi birinchi eng katta qiymatning indeksini qaytarsin.
+// MASALAN: getHighestIndex([5, 21, 12, 21 ,8]); return qiladi 1 sonini
+// Yuqoridagi misolda, birinchi indeksda 21 joylashgan.
+// Va bu 21 soni arrayning tarkibidagi birinchi eng katta son hisobladi va bizga uning indeksi 1 qaytadi.
+
+function getHighestIndex(arr) {
+    let max = arr[0];
+    let maxIndex = 0;
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+            maxIndex = i;
+        }
+    }
+
+    return maxIndex;
+}
+console.log(getHighestIndex([5, 21, 12, 21, 8]));
+console.log(getHighestIndex([3, 7, 2, 1]));
+
+
+
 // TASK F:
 // Yagona string argumentga ega findDoublers nomli function tuzing
 // Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
 // true yokida false natija qaytarsin. MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
 
-function findDoublers(str) {
-    for (let i = 0; i < str.length; i++) {
-        for (let j = i + 1; j < str.length; j++) {
-            if (str[i] === str[j]) {
-                return true;
-            }
-        }
-    }
-    return false;
-}
-console.log(findDoublers("hello"));
-console.log(findDoublers("abc"));   
-console.log(findDoublers("apple"));
-console.log(findDoublers("world")); 
+// function findDoublers(str) {
+//     for (let i = 0; i < str.length; i++) {
+//         for (let j = i + 1; j < str.length; j++) {
+//             if (str[i] === str[j]) {
+//                 return true;
+//             }
+//         }
+//     }
+//     return false;
+// }
+// console.log(findDoublers("hello"));
+// console.log(findDoublers("abc"));   
+// console.log(findDoublers("apple"));
+// console.log(findDoublers("world")); 
 
 
 
